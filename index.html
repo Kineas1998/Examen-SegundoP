@@ -1,0 +1,105 @@
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+
+   <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
+  <script type="text/babel">
+
+    const rootElement = document.getElementById('root');
+
+    /* Business Card component
+     * @param name - the name of the person displayed in the business card
+     * @param email
+     * @param phone
+     * @param headline - a brief description that describes what the person does in 120 characters or less
+
+     Tu tarjeta de presentación deberá mostrar solo la parte frontal y deberá contener los siguientes datos: 
+     nombre, correo electrónico, teléfono de contacto y una frase que te describa. 
+     Estos datos que debes mostrar deberás pasarlos como props y validar el tipo de dato de cada prop utilizando prop-types
+     */
+
+    // Add your component here :)
+
+    const PresentationCard = (props) => {
+            return (
+                <div className="postCard">
+                    <div className="content">
+                        <div className="card">
+                            <h5>{props.param.name}</h5>
+                            <h5>{props.param.email}</h5>
+                            <h5>{props.param.phone}</h5>
+                            
+                        </div>
+                       
+                        <p>{props.headline}</p>
+                    </div>
+                </div>
+            )
+        }
+
+       PresentationCard.propTypes = {
+            param: PropTypes.objectOf(PropTypes.string),
+            headline: PropTypes.string.isRequired,   
+        }
+
+
+        const BackPresentationCard = (props) => {
+            return (
+                <div className="postCard">
+                    <div className="postimage"></div>
+                    <div className="content">
+                        <div className="card">
+                            <h5>{props.param.name}</h5>
+                            <h5>{props.param.email}</h5>
+                            <h5>{props.param.phone}</h5>
+                            
+                        </div>
+                       
+                        <p>{props.headline}</p>
+                        <h4 className="signature">Para servirle</h4>
+
+                    </div>
+                </div>
+            )
+        }
+
+       BackPresentationCard.propTypes = {
+
+            param: PropTypes.objectOf(PropTypes.string),
+            headline: PropTypes.string.isRequired,   
+        }
+
+        const props = {
+            param: {
+                name: 'Luis Manuel Juárez Palazuelos',
+                phone: '7711009053',
+                email: 'A01273062@itesm.mx' 
+            },
+            headline: 'Veni, vidi vicci'
+          }
+
+          const props2 = {
+            param: {
+            },
+            headline: 'Veni, vidi vicci'
+          }
+
+    const app = (
+      <>
+        <PresentationCard {...props}/>
+        <BackPresentationCard {...props2}/>
+        
+      </>
+    );
+
+    ReactDOM.render(app, rootElement);
+  </script>
+</body>

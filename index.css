@@ -1,0 +1,47 @@
+body {
+    font-family: 'Helvetica', 'Segoe UI'; 
+}
+
+.postCard {
+    display: flex;
+    flex-direction: row;
+    border-radius: .5rem;
+    box-shadow: 10px 10px 30px -12px rgba(125,112,125,1);
+    margin: 5rem;
+}
+
+
+.postcard p {
+    font-family: 'Parisienne';
+    font-size: 3rem;
+}
+
+.card {
+    margin-top: 3rem;
+    align-self: flex-end;
+}
+
+.card h5 {
+    margin: 0;
+}
+
+.signature {
+    font-family: 'Parisienne';
+    font-size: 2rem;
+    align-self: flex-end;
+}
+
+.content {
+    padding-right: 6rem;
+    padding-left: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.postImage {
+    width: 100%;
+    background-origin: border-box;
+    background-image: url(dog.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
