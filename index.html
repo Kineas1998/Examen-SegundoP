@@ -30,16 +30,14 @@
 
     const PresentationCard = (props) => {
             return (
-                <div className="postCard">
+                <div className="PresentationCard">
                     <div className="content">
                         <div className="card">
                             <h5>{props.param.name}</h5>
                             <h5>{props.param.email}</h5>
                             <h5>{props.param.phone}</h5>
-                            
                         </div>
-                       
-                        <p>{props.headline}</p>
+                        <p>{props.frase}</p>
                     </div>
                 </div>
             )
@@ -47,25 +45,22 @@
 
        PresentationCard.propTypes = {
             param: PropTypes.objectOf(PropTypes.string),
-            headline: PropTypes.string.isRequired,   
+            frase: PropTypes.string.isRequired,   
         }
 
 
         const BackPresentationCard = (props) => {
             return (
-                <div className="postCard">
+                <div className="PresentationCard">
                     <div className="postimage"></div>
                     <div className="content">
                         <div className="card">
                             <h5>{props.param.name}</h5>
                             <h5>{props.param.email}</h5>
                             <h5>{props.param.phone}</h5>
-                            
                         </div>
-                       
-                        <p>{props.headline}</p>
+                        <p>{props.frase}</p>
                         <h4 className="signature">Para servirle</h4>
-
                     </div>
                 </div>
             )
@@ -74,32 +69,31 @@
        BackPresentationCard.propTypes = {
 
             param: PropTypes.objectOf(PropTypes.string),
-            headline: PropTypes.string.isRequired,   
+            frase: PropTypes.string.isRequired,   
         }
 
         const props = {
             param: {
                 name: 'Luis Manuel Juárez Palazuelos',
                 phone: '7711009053',
-                email: 'A01273062@itesm.mx' 
-            },
-            headline: 'Veni, vidi vicci'
+                email: 'A01273062@itesm.mx',
+                },
+            frase: 'Veni, vidi vicci'
           }
 
           const props2 = {
             param: {
             },
-            headline: 'Veni, vidi vicci'
+            frase: 'Veni, vidi vicci'
           }
 
-    const app = (
+    const AppTarjeta = (
       <>
         <PresentationCard {...props}/>
         <BackPresentationCard {...props2}/>
-        
       </>
     );
 
-    ReactDOM.render(app, rootElement);
+    ReactDOM.render(AppTarjeta, rootElement);
   </script>
 </body>

@@ -2,7 +2,7 @@ body {
     font-family: 'Helvetica', 'Segoe UI'; 
 }
 
-.postCard {
+.PresentationCard {
     display: flex;
     flex-direction: row;
     border-radius: .5rem;
@@ -11,12 +11,14 @@ body {
 }
 
 
-.postcard p {
+.PresentationCard p {
     font-family: 'Parisienne';
     font-size: 3rem;
 }
 
 .card {
+    font-family: 'Segoe UI';
+    font-size: 1.3rem;
     margin-top: 3rem;
     align-self: flex-end;
 }
